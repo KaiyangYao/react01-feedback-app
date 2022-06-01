@@ -3,7 +3,7 @@ import React from "react";
 function Header({ text }) {
   const headerStyles = {
     backgroundColor: "rgba(0,0,0,0.4)",
-    color: "#ff6a95"
+    color: "#ff6a95",
   };
 
   return (
