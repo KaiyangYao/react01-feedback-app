@@ -5,7 +5,6 @@ const FeedbackContext = createContext();
 export const FeedbackProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [feedback, setFeedback] = useState([]);
-
   const [feedbackEdit, setFeedbackEdit] = useState({
     item: {},
     edit: false,
@@ -17,7 +16,7 @@ export const FeedbackProvider = ({ children }) => {
 
   // Fetch the data from the fack backend
   const fetchFeedback = async () => {
-    const response = await fetch("/feedback?_sort=id"); // "http://localhost:5001/feedback?_sort=id"
+    const response = await fetch("/feedback?_sort=id"); // "http://localhost:5001/feedback?_sort=id"  Add a proxy to package.json!
     const data = await response.json();
     setFeedback(data);
     setTimeout(() => {
